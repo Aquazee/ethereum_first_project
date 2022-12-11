@@ -35,10 +35,12 @@ var output = JSON.parse(
 );
 
 // `output` here contains the JSON output as specified in the documentation
-for (var contractName in output.contracts['inbox.sol']) {
-  console.log(
-    contractName +
-    ': ' +
-    output.contracts['inbox.sol'][contractName].evm.bytecode.object
-  );
-}
+// for (var contractName in output.contracts['inbox.sol']) {
+//   console.log(
+//     contractName +
+//     ': ' +
+//     output.contracts['inbox.sol'][contractName].evm.bytecode.object
+//   );
+// }
+
+module.exports = output.contracts['inbox.sol']['Inbox'];
